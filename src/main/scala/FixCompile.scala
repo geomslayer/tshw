@@ -1,6 +1,6 @@
 object FixCompile extends App {
 
-    val mapper = (i: String) => if (i % 2 != 0) i * 2
+    val mapper = (i: Int) => if (i % 2 != 0) i * 2 else 0
 
     val result = List(1, 2, 3, 4, 5, 6, 7, 8, 9).map {
         mapper
