@@ -1,10 +1,10 @@
 object Task2 extends App {
 
-  def collatzSteps(x: BigInt, steps: Long = 0) =
+  def collatzSteps(x: BigInt, steps: Long = 0): Long =
     if (x == 1) steps
     else collatzSteps(if (x % 2 == 0) x / 2 else 3 * x + 1, steps + 1)
 
-  def collatzSeq(x, seq = Vector.empty): Seq[BigInt] =
+  def collatzSeq(x: BigInt, seq: Seq[BigInt] = Vector.empty): Seq[BigInt] =
     if (x == 1) seq
     else collatzSeq(if (x % 2 == 0) x / 2 else 3 * x + 1, seq :+ x)
 
