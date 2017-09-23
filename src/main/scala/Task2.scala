@@ -8,4 +8,7 @@ object Task2 extends App {
     if (x == 1) seq
     else collatzSeq(if (x % 2 == 0) x / 2 else 3 * x + 1, seq :+ x)
 
+  println(collatzSteps(27))
+  println(collatzSeq(27))
+
 }
